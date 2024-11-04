@@ -10,7 +10,7 @@ This project utilizes the Spotify Web Developer API to extract a user's top arti
 - **HTML/CSS**
 
 ## Demo
-https://github.com/user-attachments/assets/d520dd4d-5397-474a-91e0-c69ec5ebcebb
+https://github.com/user-attachments/assets/1e514a51-11b2-4357-99c1-352a75f21d50
 
 
 
