@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Cloud</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1 class="wordcloud-title">Your Word Cloud</h1>
+
+    <div class="time-range-container">
+        <div class="type-buttons">
+            <a href="{{ url_for('word_cloud', type='artists', time_range=time_range) }}" class="type-btn {% if type == 'artists' %}active{% endif %}">Artists</a>
+            <a href="{{ url_for('word_cloud', type='tracks', time_range=time_range) }}" class="type-btn {% if type == 'tracks' %}active{% endif %}">Songs</a>
+        </div>
+
+
+        <div class="time-range-buttons">
+            <a href="{{ url_for('word_cloud', type=type, time_range='short_term') }}" class="time-range-btn {% if time_range == 'short_term' %}active{% endif %}">Last 4 Weeks</a>
+            <a href="{{ url_for('word_cloud', type=type, time_range='medium_term') }}" class="time-range-btn {% if time_range == 'medium_term' %}active{% endif %}">Last 6 Months</a>
+            <a href="{{ url_for('word_cloud', type=type, time_range='long_term') }}" class="time-range-btn {% if time_range == 'long_term' %}active{% endif %}">All Time</a>
+        </div>
+
+        <img src="{{ url_for('static', filename=track_image) }}" alt="Word Cloud" class="wordcloud">
+    </div>
+</body>
+</html>

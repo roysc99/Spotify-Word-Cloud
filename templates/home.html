@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Your Spotify Word Cloud</h1>
+      <form action="{{ url_for('login') }}">
+        <input type="submit" class="spotify-button" value="Login with Spotify"/>
+      </form>
+    </div>
+  </body>
+</html>
